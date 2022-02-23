@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BUBT Bot</title>
+  <link rel="icon" href="{{ url_for('static', filename='images/icon.png') }}" type="image" sizes="16x16">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/fonts/ionicons.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/Login-Form-Dark.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/own.css') }}">
+
+</head>
+
+<body>
+  <section class="msger">
+   
+
+      <nav class="navbar navbar-expand-lg navbar-dark myBG">
+        <!--a class="navbar-brand" href="#">CRCE Bot</a-->
+        <a class="navbar-brand" href="#" style="color: white;">
+          <img src="{{ url_for('static', filename='images/icon.png') }}" alt=""><b> &nbsp; BUBT BOT &emsp; </b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item active"><a class="nav-link" href="/index">Home</a></li>
+
+            
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#exampleModalScrollable" href="#"> About Us </a>
+             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="#">Suggestion box</a>
+            </li>
+
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Suggestion box</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form action='/suggestion' method='POST'>
+                      <div class="form-group">
+                        <input type="email" name='uemail' class='form-control' placeholder="Email" required>
+                        <br>
+                        <textarea class="form-control" id="message-text" placeholder="Enter your suggestion..." name="message" required></textarea>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="Submit" class="btn btn-success" data-target="#alert">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+              aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">BUBT BOT </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                   <h3>About Us</h3>
+                   <div><img src="https://th.bing.com/th/id/R.b902429b6158d6bbbd094f7e721ff61c?rik=KqrCRAm%2bUd1DZQ&riu=http%3a%2f%2fwww.bubt.edu.bd%2fassets%2ffrontend%2fimages%2fslider%2fbubt_building_slider2.jpg&ehk=qmDzNcUBMb6KJZaiBtjY6pZ%2b8kpI4rInhb60rt%2bo9nI%3d&risl=&pid=ImgRaw&r=0" height="auto" width="100%" style="border: 3px solid black;"></div>
+                    <br> <br>
+                   <p style="text-align: justify;">Bangladesh University of Business and Technology (BUBT) was established under the Private University Act in the year 2003 modelled on North American Universities, with the approval of the University Grants Commission (UGC) and the Ministry of Education, Government of Bangladesh. It was founded by Dhaka Commerce College, Mirpur- 2, Dhaka, and is managed by a Board of Trustees and a Syndicate. BUBT is one of the leading universities in the private sector of Bangladesh. It has been providing quality education and training since its very inception. At present BUBT has established itself as a top ranking Private University in the country, not only by fulfilling all of the requirements of the Private University Act, 2010, but also by maintaining the standard of education, research facilities, transparent examination system, updated academic programs, necessary physical infrastructures, co-curricular and extra-curricular activities, modern facilities for the students and a disciplined environment.</p>
+
+                    <p style="text-align: justify;">Bangladesh University of Business and Technology (BUBT) is one of the top-ranking universities in Bangladesh which started its journey in the year 2003. I am happy to present to you our university and welcome you to be involved in the progress of the university as its stakeholders. Over the last 17 years, BUBT has grown its stature and is now regarded as a globally recognized university. It is now members of prestigious organizations like Association of Commonwealth Universities, the Association of International Universities and the Association of Management Development institutions in South Asia.</p>
+                    
+                    <p style="text-align: justify;">At present BUBT offers 20 different undergraduate and post graduate programs under five faculties namely: i) Faculty of Business ii) Faculty of Engineering and Applied Sciences iii) Faculty of Arts & Humanities iv) Faculty of Social Sciences and v) Faculty of Law. Very soon, BUBT is going to start B.Sc in Civil Engineering with the approval  from the University Grants Commission (UGC).</p>
+
+                    <p style="text-align: justify;">BUBT aims to be a leading educational institution for academic excellence, innovation and research. To provide quality education to students through innovative teaching and learning process at an affordable cost for transforming the BUBT graduates into competent human resources. </p>
+
+                    <p style="text-align: justify;">The principal objective of Bangladesh University of Business and Technology (BUBT) is to produce highly skilled manpower capable of contributing to the national development as entrepreneurs, academics, professionals and administrators.</p>
+                    
+                    <h3>Contact Us</h3>
+                    <ul>
+                      <li style = "margin-left:15px">Email: info@bubt.edu.bd</li>
+                      <li style = "margin-left:15px">Rupnagar, Mirpur-2, Dhaka-1216 😊 </li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+            
+          </ul>
+        </div>
+    
+   
+    </nav>
+    <!--header class="msger-header">
+      <div class="msger-header-title">
+        <h5><i class="fas fa-graduation-cap"></i> <b> &emsp; CRCE BOT &emsp; </b><i class="fas fa-graduation-cap"></i></h5>
+      </div>
+    </header-->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success alert-dismissible" id="alert" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <strong>{{ message }}</strong>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+   
+   
+    <main class="msger-chat" style="color: white;">
+    </br>
+      <div class="msg left-msg">       
+        <div class="msg-img" style = "background-image: url(https://www.bubt.edu.bd/assets/componats/new-image/BUBT-Logo.png)">
+        </div>
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name"><b>BUBT BOT</b> </div>
+          </div>      
+              
+          <div class="msg-text" style="color: white;">
+            <b >Hello! I am BUBT-bot. I will try my best to provide you information related to our University!
+          </div>
+        </div>
+      </div> 
+      <!-- <div class="msg left-msg">       
+        <div class="msg-img" style = "background-image: url(https://www.bubt.edu.bd/assets/componats/new-image/BUBT-Logo.png)">
+        </div>
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name"> <b>BUBT BOT</b></div>
+          </div>      
+
+          <div class="msg-text" style="color: white;">
+            Which of the following user groups do you belong to?
+            <br><br>0.&emsp;Admission Enquiry.<br>1.&emsp;Student's Section Enquiry.</br>2.&emsp;Faculty Section Enquiry. </br>3.&emsp;Parent's Section Enquiry.</br>4.&emsp;Visitor's Section Enquiry.</br>
+          </div>               
+
+        </div>
+      </div> -->
+
+    </main>
+
+    <form class="msger-inputarea">
+      <input type="text" class="msger-input" id="textInput" placeholder="Enter your enquiry...">
+      <button type="submit" class="msger-send-btn">Send</button>
+    </form>
+  </section>
+  <!-- partial -->
+  <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+  <script>
+
+    $("#alert").delay(3000).slideUp(200, function() {
+    $(this).alert('close');
+    });
+
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+    
+    const msgerForm = get(".msger-inputarea");
+    const msgerInput = get(".msger-input");
+    const msgerChat = get(".msger-chat");
+
+
+    // Icons made by Freepik from www.flaticon.com
+    const BOT_IMG = "static/images/icon.png";
+    const PERSON_IMG = "https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_960_720.png";
+    const BOT_NAME = "BUBT Bot";
+    const PERSON_NAME = "You";
+
+    msgerForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const msgText = msgerInput.value;
+      if (!msgText) return;
+
+      appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+      msgerInput.value = "";
+      botResponse(msgText);
+    });
+
+    function appendMessage(name, img, side, text) {
+      //   Simple solution for small apps
+      const msgHTML = `
+<div class="msg ${side}-msg">
+  <div class="msg-img" style="background-image: url(${img})"></div>
+
+  <div class="msg-bubble">
+    <div class="msg-info">
+      <div class="msg-info-name">${name}</div>
+      <div class="msg-info-time">${formatDate(new Date())}</div>
+    </div>
+
+    <div class="msg-text">${text}</div>
+  </div>
+</div>
+`;
+
+      msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+      msgerChat.scrollTop += 500;
+    }
+
+    function botResponse(rawText) {
+
+      // Bot Response
+      $.get("/get", { msg: rawText }).done(function (data) {
+        console.log(rawText);
+        console.log(data);
+        const msgText = data;
+        appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+
+      });
+
+    }
+
+
+    // Utils
+    function get(selector, root = document) {
+      return root.querySelector(selector);
+    }
+
+    function formatDate(date) {
+      const h = "0" + date.getHours();
+      const m = "0" + date.getMinutes();
+
+      return `${h.slice(-2)}:${m.slice(-2)}`;
+    }
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
